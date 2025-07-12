@@ -1,27 +1,9 @@
+import PropTypes from "prop-types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MapPin, Star, MessageSquare } from "lucide-react";
-
-interface Skill {
-  name: string;
-  description: string;
-  level: 'beginner' | 'intermediate' | 'expert';
-}
-
-interface SkillCardProps {
-  id: string;
-  name: string;
-  location?: string;
-  avatar?: string;
-  skillsOffered: Skill[];
-  skillsWanted: Skill[];
-  rating?: number;
-  totalSwaps?: number;
-  onClick?: () => void;
-  onRequestSwap?: () => void;
-}
 
 const skillLevelColors = {
   beginner: "skill-beginner",
@@ -40,7 +22,7 @@ export default function SkillCard({
   totalSwaps = 0,
   onClick,
   onRequestSwap
-}: SkillCardProps) {
+}) {
   const initials = name.split(' ').map(n => n[0]).join('').toUpperCase();
 
   return (
@@ -141,3 +123,24 @@ export default function SkillCard({
     </Card>
   );
 }
+
+SkillCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  skillsOffered: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    level: PropTypes.oneOf(['beginner', 'intermediate', 'expert']).isRequired
+  })).isRequired,
+  skillsWanted: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    level: PropTypes.oneOf(['beginner', 'intermediate', 'expert']).isRequired
+  })).isRequired,
+  rating: PropTypes.number,
+  totalSwaps: PropTypes.number,
+  onClick: PropTypes.func,
+  onRequestSwap: PropTypes.func
+};

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -11,15 +11,11 @@ import {
   Home
 } from "lucide-react";
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }) {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const isActive = (path: string) => currentPath === path;
+  const isActive = (path) => currentPath === path;
 
   return (
     <div className="min-h-screen bg-background">
@@ -151,3 +147,7 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+};

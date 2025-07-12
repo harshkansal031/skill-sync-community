@@ -23,12 +23,12 @@ const featuredSkills = [
     location: "San Francisco, CA",
     avatar: "",
     skillsOffered: [
-      { name: "React Development", description: "Frontend web development", level: "expert" as const },
-      { name: "UI/UX Design", description: "User interface design", level: "intermediate" as const }
+      { name: "React Development", description: "Frontend web development", level: "expert" },
+      { name: "UI/UX Design", description: "User interface design", level: "intermediate" }
     ],
     skillsWanted: [
-      { name: "Spanish", description: "Conversational Spanish", level: "beginner" as const },
-      { name: "Photography", description: "Portrait photography", level: "beginner" as const }
+      { name: "Spanish", description: "Conversational Spanish", level: "beginner" },
+      { name: "Photography", description: "Portrait photography", level: "beginner" }
     ],
     rating: 4.9,
     totalSwaps: 23
@@ -39,11 +39,11 @@ const featuredSkills = [
     location: "Austin, TX",
     avatar: "",
     skillsOffered: [
-      { name: "Guitar Lessons", description: "Acoustic and electric guitar", level: "expert" as const },
-      { name: "Music Production", description: "Digital audio workstations", level: "intermediate" as const }
+      { name: "Guitar Lessons", description: "Acoustic and electric guitar", level: "expert" },
+      { name: "Music Production", description: "Digital audio workstations", level: "intermediate" }
     ],
     skillsWanted: [
-      { name: "Python Programming", description: "Data science applications", level: "beginner" as const }
+      { name: "Python Programming", description: "Data science applications", level: "beginner" }
     ],
     rating: 4.8,
     totalSwaps: 15
@@ -54,12 +54,12 @@ const featuredSkills = [
     location: "New York, NY", 
     avatar: "",
     skillsOffered: [
-      { name: "French Tutoring", description: "Native French speaker", level: "expert" as const },
-      { name: "Baking", description: "Pastries and breads", level: "intermediate" as const }
+      { name: "French Tutoring", description: "Native French speaker", level: "expert" },
+      { name: "Baking", description: "Pastries and breads", level: "intermediate" }
     ],
     skillsWanted: [
-      { name: "Yoga Instruction", description: "Beginner yoga poses", level: "beginner" as const },
-      { name: "Digital Marketing", description: "Social media strategy", level: "intermediate" as const }
+      { name: "Yoga Instruction", description: "Beginner yoga poses", level: "beginner" },
+      { name: "Digital Marketing", description: "Social media strategy", level: "intermediate" }
     ],
     rating: 5.0,
     totalSwaps: 31
